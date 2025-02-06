@@ -52,3 +52,17 @@ Run in development mode
 ```bash
 firebase serve
 ```
+
+## Deploy to Firebase Hosting
+
+Login to Firebase
+
+```bash
+firebase login
+```
+
+Deploy to Firebase Hosting
+
+```bash
+firebase deploy
+```
