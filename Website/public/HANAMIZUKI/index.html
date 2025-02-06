@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanamizuki ใช้อัปรูป</title>
+    <link rel="shortcut icon" href="../assets/icon/MyLogo.png" type="image/x-icon">
+
+    <!-- Link Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <!-- Link my CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="bg-dark">
+    <div id="app" class="pb-3">
+        <button id="goToNewBtn" class="btn btn-danger text-warning" @click="goToNew">New</button>
+        <small id="status-bar" :class="status.color" v-if="status.show">{{status.text}}</small>
+        <header class="text-center text-white bg-primary">
+            <h1>Hanamizuki ใช้อัปรูป</h1>
+        </header>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-9 bg-white border rounded pt-3">
+                    <div class="card mb-3" v-for="(image, i) in images">
+                        <a :href="image.url" target="_blank" :key="i">
+                            <img class="card-img-top" :src="image.url" :alt="image.name">
+                        </a>
+                        <div class="card-body text-right text-primary">
+                            Uploaded at {{image.timestamp}} by <b>{{image.uploader}}</b>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3" v-if="user != null">
+                    <div class="custom-file sticky-top">
+                        <input type="file" class="custom-file-input" id="imageInput" accept="Image/*"
+                            @change="uploadImage">
+                        <label class="custom-file-label" for="imageInput">Choose image file</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- Link Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/7.14.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="/__/firebase/7.14.2/firebase-database.js"></script>
+    <script src="/__/firebase/7.14.2/firebase-auth.js"></script>
+    <script src="/__/firebase/7.14.2/firebase-storage.js"></script>
+
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
+
+    <!-- Link Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <!-- Link My Functions -->
+    <script src="./upload_image.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+{
+  "rules": {
+    "app": {
+      ".read": true,
+      ".write": true
+    },
+    "lists": {
+      ".read": true,
+      ".write": false
+    },
+    "records": {
+      "$uid": {
+        ".read": "$uid==auth.uid",
+        ".write": "$uid==auth.uid",
+        ".indexOn": "date"
+      }
+    },
+    "users": {
+      "$uid": {
+        ".read": "$uid==auth.uid",
+        ".write": "$uid==auth.uid"
+      }
+    },
+    "HANAMIZUKI": {
+      "images": {
+        ".read": true,
+        ".write": "auth.uid != null"
+      }
+    }
+  }
+}

@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt&display=swap");
+
+@keyframes lds-ellipsis1 {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes lds-ellipsis3 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes lds-ellipsis2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(24px, 0);
+    }
+}
+
+body {
+    font-family: "Prompt", sans-serif;
+}
+
+.scene-center {
+    position: absolute;
+    top: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+}
+
+.scene-center.off {
+    display: none;
+}
+
+#loginNavbar.off {
+    display: none;
+}
+
+#displayNameNavbar.off {
+    display: none;
+}
+
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+}
+
+.lds-ellipsis div.off:nth-child(1) {
+    animation: none;
+}
+
+.lds-ellipsis div.off:nth-child(2) {
+    animation: none;
+}
+
+.lds-ellipsis div.off:nth-child(3) {
+    animation: none;
+}
+
+.lds-ellipsis div.off:nth-child(4) {
+    animation: none;
+}
+
+.required-star {
+    color: red;
+}
