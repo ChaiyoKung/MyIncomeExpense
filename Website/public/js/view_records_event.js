@@ -43,7 +43,7 @@ function checkUserIsLogined() {
       uName = user.displayName;
       let uEmail = user.email;
 
-      if (uid == "" && uEmail == "" && uName == "") {
+      if (uid == env.ADMIN_USER_ID && uEmail == env.ADMIN_EMAIL && uName == env.ADMIN_NAME) {
         document.getElementById("uNameDropdownMenu").innerHTML +=
           `<a href="../add_app.html" class="dropdown-item">Add app</a>
                 <a href="https://console.firebase.google.com/project/myincomeexpense/overview" class="dropdown-item" target="_blank">Console</a>`;

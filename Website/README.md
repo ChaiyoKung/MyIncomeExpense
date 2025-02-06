@@ -2,24 +2,10 @@
 
 ## Configuration
 
-Set up admin user in `public/js/download_event.js` file.
+Create a `env.js` file and set variables
 
-```js
-function checkUserIsLogined() {
-  firebaseAuth.onAuthStateChanged((user) => {
-    if (user) {
-      ...
-      if (uid == "" && uEmail == "" && uName == "") {
-```
-
-Set up admin user in `public/js/view_records_event.js` file.
-
-```js
-function checkUserIsLogined() {
-  firebaseAuth.onAuthStateChanged((user) => {
-    if (user) {
-      ...
-      if (uid == "" && uEmail == "" && uName == "") {
+```bash
+cp public/js/env.example.js public/js/env.js
 ```
 
 ## Getting Started
