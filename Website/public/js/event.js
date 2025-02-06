@@ -240,7 +240,7 @@ function checkUserIsLogined() {
     if (user) {
       // User is signed in.
       const uid = user.uid;
-      const uName = user.displayName;
+      uName = user.displayName;
       const uEmail = user.email;
 
       // document.getElementById("uNameDropdownMenu").innerHTML += `<a href="./profile.html" class="dropdown-item" id="logoutButton">Profile</a>`;

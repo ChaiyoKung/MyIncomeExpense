@@ -36,7 +36,7 @@ function checkUserIsLogined() {
     if (user) {
       // User is signed in.
       const uid = user.uid;
-      const uName = user.displayName;
+      uName = user.displayName;
       const uEmail = user.email;
 
       if (uid == env.ADMIN_USER_ID && uEmail == env.ADMIN_EMAIL && uName == env.ADMIN_NAME) {
