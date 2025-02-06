@@ -73,7 +73,6 @@ let app = new Vue({
         () => {
           // Upload completed successfully, now we can get the download URL
           uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
-            // console.log("File available at", downloadURL);
             firebaseRootRef
               .child("HANAMIZUKI")
               .child("images")

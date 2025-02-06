@@ -28,7 +28,6 @@ function register(displayName, email, password) {
     .createUserWithEmailAndPassword(email, password)
     .then(() => {
       let nowUser = firebase.auth().currentUser;
-      console.log(nowUser);
       nowUser
         .updateProfile({
           displayName: displayName,
