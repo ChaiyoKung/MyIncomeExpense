@@ -2,11 +2,7 @@
 const firebaseDB = firebase.database();
 const firebaseRootRef = firebaseDB.ref();
 const firebaseAuth = firebase.auth();
-// const fbProvider = new firebase.auth.FacebookAuthProvider();
-// const googleProvider = new firebase.auth.GoogleAuthProvider();
 
-// let today = getDateNow();
-// let lastBalance = 0;
 let uName = "";
 let nowLists = [];
 

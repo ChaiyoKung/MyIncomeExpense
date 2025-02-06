@@ -202,7 +202,6 @@ function save() {
       // User is signed in.
       let uid = user.uid;
       let pk = Date.now();
-      // let nowDate = getDateNow();
       let nowDate = getDateNow(new Date(selectDate.value));
       let nowListID = getListID();
       let nowIncome = 0;
