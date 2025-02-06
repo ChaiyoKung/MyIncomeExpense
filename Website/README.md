@@ -53,6 +53,13 @@ Run in development mode
 firebase serve
 ```
 
+## Utilities commands
+
+```bash
+# Format code
+npx prettier "public/**/*.{html,css,js}" --write
+```
+
 ## Deploy to Firebase Hosting
 
 Login to Firebase

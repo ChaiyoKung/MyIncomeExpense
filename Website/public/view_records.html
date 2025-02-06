@@ -1,109 +1,107 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>View records | My Income Expense</title>
-    <link rel="shortcut icon" href="./assets/icon/MyLogo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/icon/MyLogo.png" type="image/x-icon" />
 
     <!-- Link Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
 
     <!-- Link My CSS -->
-    <link rel="stylesheet" href="./css/default.css">
-</head>
+    <link rel="stylesheet" href="./css/default.css" />
+  </head>
 
-<body>
+  <body>
     <!-- Navbar -->
     <div class="bg-primary">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <!-- Brand header -->
+          <a class="navbar-brand" href="./">รายรับรายจ่าย</a>
 
-                <!-- Brand header -->
-                <a class="navbar-brand" href="./">รายรับรายจ่าย</a>
+          <!-- Hamburger menu button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-                <!-- Hamburger menu button -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Menu list -->
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="./download.html">Download</a>
-                        </li>
-                        <li class="nav-item active" id="loginNavbar">
-                            <a href="#loginModal" data-toggle="modal" class="nav-link">Login</a>
-                        </li>
-                        <li class="nav-item active dropdown off" id="displayNameNavbar">
-                            <a href="#" class="nav-link dropdown-toggle" id="uNameDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            </a>
-                            <div class="dropdown-menu" id="uNameDropdownMenu" aria-labelledby="uNameDropdown">
-                                <!-- Code here will generate by JS -->
-                            </div>
-                        </li>
-                    </ul>
+          <!-- Menu list -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="./download.html">Download</a>
+              </li>
+              <li class="nav-item active" id="loginNavbar">
+                <a href="#loginModal" data-toggle="modal" class="nav-link">Login</a>
+              </li>
+              <li class="nav-item active dropdown off" id="displayNameNavbar">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle"
+                  id="uNameDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                </a>
+                <div class="dropdown-menu" id="uNameDropdownMenu" aria-labelledby="uNameDropdown">
+                  <!-- Code here will generate by JS -->
                 </div>
-            </nav>
-        </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </div>
 
     <!-- Main body -->
     <div class="container pt-4">
-        <div class="row mb-4 justify-content-center">
-            <div class="col-lg-8 table-responsive">
-                <div class="d-flex justify-content-between">
-                    <a href="./">Back</a>
-                    <a href="#delete" id="deleteRecordsButton" class="text-danger">Delete Records</a>
-                </div>
-                <table class="table">
-                    <caption>แสดงรายการที่บันทึกทั้งหมด</caption>
-                    <thead>
-                        <tr>
-                            <th>วัน/เดือน/ปี</th>
-                            <th>รายการ</th>
-                            <th>รายรับ</th>
-                            <th>รายจ่าย</th>
-                            <th>คงเหลือ</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tbody">
-                        <!-- html at here will generate by ./js/event.js -->
-                    </tbody>
-                </table>
-            </div>
+      <div class="row mb-4 justify-content-center">
+        <div class="col-lg-8 table-responsive">
+          <div class="d-flex justify-content-between">
+            <a href="./">Back</a>
+            <a href="#delete" id="deleteRecordsButton" class="text-danger">Delete Records</a>
+          </div>
+          <table class="table">
+            <caption>
+              แสดงรายการที่บันทึกทั้งหมด
+            </caption>
+            <thead>
+              <tr>
+                <th>วัน/เดือน/ปี</th>
+                <th>รายการ</th>
+                <th>รายรับ</th>
+                <th>รายจ่าย</th>
+                <th>คงเหลือ</th>
+              </tr>
+            </thead>
+            <tbody id="tbody">
+              <!-- html at here will generate by ./js/event.js -->
+            </tbody>
+          </table>
         </div>
+      </div>
     </div>
 
     <!-- Loading scene -->
     <div class="scene-center" id="loadingScene">
-        <div class="lds-ellipsis">
-            <div class="bg-primary"></div>
-            <div class="bg-primary"></div>
-            <div class="bg-primary"></div>
-            <div class="bg-primary"></div>
-        </div>
+      <div class="lds-ellipsis">
+        <div class="bg-primary"></div>
+        <div class="bg-primary"></div>
+        <div class="bg-primary"></div>
+        <div class="bg-primary"></div>
+      </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <!-- Link Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
@@ -123,6 +121,5 @@
 
     <!-- Link My Functions -->
     <script src="./js/view_records_event.js"></script>
-</body>
-
+  </body>
 </html>

@@ -1,114 +1,131 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register | My Income Expense</title>
-    <link rel="shortcut icon" href="./assets/icon/MyLogo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/icon/MyLogo.png" type="image/x-icon" />
 
     <!-- Link Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
 
     <!-- Link My CSS -->
-    <link rel="stylesheet" href="./css/default.css">
-</head>
+    <link rel="stylesheet" href="./css/default.css" />
+  </head>
 
-<body>
+  <body>
     <!-- Navbar -->
     <div class="bg-primary">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <!-- Brand header -->
+          <a class="navbar-brand" href="./">รายรับรายจ่าย</a>
 
-                <!-- Brand header -->
-                <a class="navbar-brand" href="./">รายรับรายจ่าย</a>
+          <!-- Hamburger menu button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-                <!-- Hamburger menu button -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Menu list -->
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="./download.html">Download</a>
-                        </li>
-                        <li class="nav-item active" id="loginNavbar">
-                            <a href="./index.html" class="nav-link">Login</a>
-                        </li>
-                        <li class="nav-item active dropdown off" id="displayNameNavbar">
-                            <a href="#" class="nav-link dropdown-toggle" id="uNameDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            </a>
-                            <div class="dropdown-menu" id="uNameDropdownMenu" aria-labelledby="uNameDropdown">
-                                <!-- Code here will generate by JS -->
-                            </div>
-                        </li>
-                    </ul>
+          <!-- Menu list -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="./download.html">Download</a>
+              </li>
+              <li class="nav-item active" id="loginNavbar">
+                <a href="./index.html" class="nav-link">Login</a>
+              </li>
+              <li class="nav-item active dropdown off" id="displayNameNavbar">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle"
+                  id="uNameDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                </a>
+                <div class="dropdown-menu" id="uNameDropdownMenu" aria-labelledby="uNameDropdown">
+                  <!-- Code here will generate by JS -->
                 </div>
-            </nav>
-        </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </div>
 
     <!-- Main body -->
     <div class="container pt-4">
-        <div class="col">
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="m-0">Register form</h3>
-                </div>
-                <div class="card-body">
-                    <form id="register-form">
-                        <div class="form-group">
-                            <label for="disName">Name: <span class="required-star">*</span></label>
-                            <input type="email" class="form-control" id="disName" placeholder="e.g. David" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="regEmail">Email: <span class="required-star">*</span></label>
-                            <input type="email" class="form-control" id="regEmail" placeholder="Email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="regPassword">Password: <span class="required-star">*</span></label>
-                            <input type="password" class="form-control" id="regPassword" aria-describedby="regPassHelp"
-                                placeholder="Password" required>
-                            <small id="regPassHelp" class="form-text text-muted">Your password must greater or equal 6
-                                characters long, contain letters and numbers, and must not contain spaces, special
-                                characters, or emoji.</small>
-                        </div>
-                        <div class="form-group">
-                            <label for="regConfirmPassword">Confirm password: <span
-                                    class="required-star">*</span></label>
-                            <input type="password" class="form-control" id="regConfirmPassword" data-isEqualPass="false"
-                                placeholder="Confirm password" required>
-                            <small id="regPassHelp" class="form-text text-muted">Confirm password must equal
-                                password.</small>
-                        </div>
-                        <div class="d-flex justify-content-end">
-                            <button type="button" class="btn btn-primary" id="regButton">Register</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+      <div class="col">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="m-0">Register form</h3>
+          </div>
+          <div class="card-body">
+            <form id="register-form">
+              <div class="form-group">
+                <label for="disName">Name: <span class="required-star">*</span></label>
+                <input type="email" class="form-control" id="disName" placeholder="e.g. David" required />
+              </div>
+              <div class="form-group">
+                <label for="regEmail">Email: <span class="required-star">*</span></label>
+                <input type="email" class="form-control" id="regEmail" placeholder="Email" required />
+              </div>
+              <div class="form-group">
+                <label for="regPassword">Password: <span class="required-star">*</span></label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="regPassword"
+                  aria-describedby="regPassHelp"
+                  placeholder="Password"
+                  required
+                />
+                <small id="regPassHelp" class="form-text text-muted"
+                  >Your password must greater or equal 6 characters long, contain letters and numbers, and must not
+                  contain spaces, special characters, or emoji.</small
+                >
+              </div>
+              <div class="form-group">
+                <label for="regConfirmPassword">Confirm password: <span class="required-star">*</span></label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="regConfirmPassword"
+                  data-isEqualPass="false"
+                  placeholder="Confirm password"
+                  required
+                />
+                <small id="regPassHelp" class="form-text text-muted">Confirm password must equal password.</small>
+              </div>
+              <div class="d-flex justify-content-end">
+                <button type="button" class="btn btn-primary" id="regButton">Register</button>
+              </div>
+            </form>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- Loading scene -->
     <div class="scene-center off" id="loadingScene">
-        <div class="lds-ellipsis">
-            <div class="bg-primary"></div>
-            <div class="bg-primary"></div>
-            <div class="bg-primary"></div>
-            <div class="bg-primary"></div>
-        </div>
+      <div class="lds-ellipsis">
+        <div class="bg-primary"></div>
+        <div class="bg-primary"></div>
+        <div class="bg-primary"></div>
+        <div class="bg-primary"></div>
+      </div>
     </div>
-
-
-
-
-
 
     <!-- Link Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
@@ -128,6 +145,5 @@
 
     <!-- Link My Functions -->
     <script src="./js/register_event.js"></script>
-</body>
-
+  </body>
 </html>
