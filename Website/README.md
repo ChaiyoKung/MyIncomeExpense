@@ -22,21 +22,6 @@ function checkUserIsLogined() {
       if (uid == "" && uEmail == "" && uName == "") {
 ```
 
-Maby need to set up Facebook App ID and API version in `public/connectFB/connectfb.js` file.
-
-```js
-window.fbAsyncInit = function () {
-  FB.init({
-    appId: "{your-app-id}",
-    cookie: true,
-    xfbml: true,
-    version: "{api-version}",
-  });
-
-  FB.AppEvents.logPageView();
-};
-```
-
 ## Getting Started
 
 Install the Firebase CLI
