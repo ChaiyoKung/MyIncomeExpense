@@ -239,13 +239,13 @@ function checkUserIsLogined() {
   firebaseAuth.onAuthStateChanged((user) => {
     if (user) {
       // User is signed in.
-      let uid = user.uid;
-      uName = user.displayName;
-      let uEmail = user.email;
+      const uid = user.uid;
+      const uName = user.displayName;
+      const uEmail = user.email;
 
       // document.getElementById("uNameDropdownMenu").innerHTML += `<a href="./profile.html" class="dropdown-item" id="logoutButton">Profile</a>`;
 
-      if (uid === "***REMOVED***") {
+      if (uid == env.ADMIN_USER_ID && uEmail == env.ADMIN_EMAIL && uName == env.ADMIN_NAME) {
         document.getElementById("uNameDropdownMenu").innerHTML +=
           `<a href="../add_app.html" class="dropdown-item">Add app</a>
                 <a href="https://console.firebase.google.com/project/myincomeexpense/overview" class="dropdown-item" target="_blank">Console</a>`;

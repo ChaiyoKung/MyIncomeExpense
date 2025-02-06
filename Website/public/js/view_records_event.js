@@ -35,9 +35,9 @@ function checkUserIsLogined() {
   firebaseAuth.onAuthStateChanged((user) => {
     if (user) {
       // User is signed in.
-      let uid = user.uid;
-      uName = user.displayName;
-      let uEmail = user.email;
+      const uid = user.uid;
+      const uName = user.displayName;
+      const uEmail = user.email;
 
       if (uid == env.ADMIN_USER_ID && uEmail == env.ADMIN_EMAIL && uName == env.ADMIN_NAME) {
         document.getElementById("uNameDropdownMenu").innerHTML +=
